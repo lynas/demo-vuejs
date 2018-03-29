@@ -11,7 +11,14 @@
             return {
                 msg: "hello from vue js"
             }
+        },
+        created: function () {
+            const token = this.$session.get("token");
+            if ('undefined' == typeof token || token ==null) {
+                this.$router.push('/login');
+            }
         }
+
     }
 </script>
 

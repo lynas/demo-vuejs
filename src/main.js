@@ -3,8 +3,11 @@ import App from './App.vue';
 import HelloWorld from './components/HelloWorld'
 import Login from './components/Login'
 import VueRouter from 'vue-router';
+import VueSessionStorage from 'vue-sessionstorage'
 
+Vue.use(VueSessionStorage);
 Vue.use(VueRouter);
+
 const routes = [
     {
         path: "/",
