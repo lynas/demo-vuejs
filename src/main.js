@@ -23,6 +23,14 @@ const router = new VueRouter({routes});
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+    console.log("OK");
+
+    next()
+});
+
+
+
 new Vue({
     router,
     render: h => h(App)
